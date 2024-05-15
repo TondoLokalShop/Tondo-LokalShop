@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="css/FAQ.css">
+    <style>
+        .btn { 
+            cursor: pointer;
+        }
+        .btn:hover >h3 {
+            color: #279cfc;
+        }
+        .inner-btn {
+            display: none; 
+        }
+        .btn.active > .inner-btn {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <script> 
+        function fun(){
+            var mob_nav = document.querySelector(".navbar");
+            mob_nav.classList.toggle("active");
+        }
+         
+
+        function View() {
+            var elements = document.querySelectorAll('.btn');
+
+            elements.forEach(function(element) {
+                element.addEventListener('click', function() {
+                     
+                    elements.forEach(function(el) {
+                        el.classList.remove('active');
+                    }); 
+                    this.classList.add('active');
+                });
+            });
+        }
+    
+    </script>
+    
+    <header>
+        <a href="index.html" class="logo"><img src="image/last.png" alt=""></a> 
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="Size Chart.html">Size Chart</a></li>
+            <li><a href="location.html">Location</a></li> 
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="FAQ.html">FAQ</a></li> 
+        </ul>
+
+        <img src="image/burger.png" class="burger" onclick="fun()" alt="">
+    
+    </header>
+ 
+    <section class="cta">
+        <h2>Frequently Asked Question</h2>
+        <div class="faq-text"> 
+            <div class="btn active" onclick="View()">  
+                <h3>How long will it take for my order to arrive? </h3>
+                    <div class="inner-btn">
+                        <p>All standard orders around Manila will be shipped within the day while outside Metro Manila will be shipped
+                            4 to 5 business days of confirmation from our team that they have received your order. If your order includes
+                            an item that we indicated will be shipped at a later date, we will only ship the entire order out together once
+                            the item arrives.  </p> 
+                    </div>
+            </div>
+
+            <div class="btn" onclick="View()" > 
+                <h3>How long will it take for my order to arrive? </h3>
+                <div class="inner-btn">
+                    <p>All standard orders around Manila will be shipped within the day while outside Metro Manila will be shipped
+                        4 to 5 business days of confirmation from our team that they have received your order. If your order includes
+                        an item that we indicated will be shipped at a later date, we will only ship the entire order out together once
+                        the item arrives.
+                   </p> 
+                </div>
+            </div>
+
+            <div class="btn" onclick="View()" > 
+                <h3>How do I place a return or exchange?  </h3>
+                <div class="inner-btn">
+                    <p>It’s our goal to ensure you have the best possible experience with us, and so we offer returns valid for 30 days from the date of arrival.
+                        As such, you will be responsible for paying for your own shipping costs for returning your item. 
+       
+                       To return your item, do email/contact us at (tondolokalshop@gmail.com / 63+ 994 939 2833)
+                       
+                       <br><br>
+       
+                       If 15 days have gone by since you’ve received the parcel, unfortunately, we can’t offer you a refund or exchange. To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging. Gift cards are non-returnable. Please note that shipping cost is not refunded.
+       
+                       </p>
+                </div>
+            </div> 
+
+            <div class="btn" onclick="View()">
+                <h3>How do I know which size fits me? </h3>
+                <div class="inner-btn">
+                    <p>We provide a size chart (INCHES/CM) and a size guide at the end of the product image gallery. 
+                        If you have any specific questions please feel to email us at tondolokalshop@gmail.com</p> 
+                </div> 
+            </div>
+            <div class="btn" onclick="View()">
+                <h3>How can I ensure that the parcel you’re shipping is well-packed? </h3>
+                <div class="inner-btn"> 
+                    <p>To ensure that the parcel we're shipping is well-packed, we use adhesive plastic 
+                        packaging and eco-friendly bags. If it's for same-day delivery or walk-in. Same with parcel delivery,
+                         we'll add bubble wrap and a pouch.</p>
+
+                </div> 
+            </div>
+            
+           
+        </div>
+    </section>
+    
+    
+    <section class="contact" id="contact" >
+        <div class="footer">
+            <div class="main">
+                <div class="col">
+                    <h4>Menu Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="Size Chart.html">Size Chart</a></li>
+                        <li><a href="location.html">Location</a></li> 
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                    </ul> 
+                </div> 
+                <div class="col">
+                    <h4>Social Media</h4>
+                    <div class="social"> 
+                        <ul>
+                            <li><a href="https://www.facebook.com/mnydrdgry">Money Drudgery Clothing</a></li>
+                            <li><a href="https://www.facebook.com/BrandNewWithTagClothing">Brand New With Tag</a></li>
+                            <li><a href="https://www.facebook.com/VICEVERSA.Clo">Vice Versa Clothing</a></li>
+                            <li><a href="https://www.facebook.com/groups/328053012465344">Facebook Group</a></li> 
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

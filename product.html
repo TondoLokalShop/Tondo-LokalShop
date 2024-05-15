@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/product.css">
+    <style>
+        .product-slide { 
+            width: 100%;
+            margin-top: 30px;
+            height: 50vh;
+            overflow: hidden; 
+            position: relative;
+        }
+        .img-slide {
+            width: 100%; 
+            display: none;
+        }
+        .img-slide img {
+            width: 100%;
+            height: 100%; 
+        }
+
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+        }
+
+
+        @media (max-width: 1140px) { 
+ 
+        }
+        @media (max-width: 820px)
+        {  
+            .Product{   
+                padding-top: 10px;
+            } 
+            .logo {
+                font-size: 14px;
+            }
+            .product-slide {
+                height: 25vh;
+                margin-top: 30px; 
+            }
+            .img-slide {  
+                height: 100%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function fun(){
+            var mob_nav = document.querySelector(".navbar");
+            mob_nav.classList.toggle("actives");
+        }
+    </script>
+    <header>
+        <a href="index.html" class="logo"><img src="image/last.png" alt=""></a> 
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="Size Chart.html">Size Chart</a></li>
+            <li><a href="location.html">Location</a></li> 
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+
+        </ul>
+
+        <img src="image/burger.png" class="burger" onclick="fun()" alt="">
+    
+    </header>
+ 
+
+    <section class="Product" id="Product" >
+        <div class="product-slide">
+            <div class="img-slide">  <img src="image/qwe.jpeg"  alt="">  </div> 
+            <div class="img-slide">  <img src="image/op.jpg"  alt="">  </div> 
+            <div class="img-slide">  <img src="image/fff.jpg"  alt="">  </div> 
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+        </div> 
+
+        <div style="text-align:center; margin: 20px;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div class="heading">
+            <span>Apparel</span>
+            <h2>New Arrival</h2> 
+        </div>
+        <div class="product-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="image/bnh.jpg" alt="">
+                </div>
+                <h2>Brain and Heart</h2>
+                <h3>The design is inspired about the unity of the heart and brain,
+                    due to feelings and thoughts that often conflict.
+                </h3>
+                <span>₱ 650.00</span>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="image/budget.jpg" alt="">
+                </div>
+                <h2>Minimal Embroid</h2>
+                <h3>This release is for budget friendly that focuses on quality minimal design "Simple Drip Typography Logo"
+                </h3>
+                <span>₱ 500.00</span>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="image/sato.jpg" alt="">
+                </div>
+                <h2>Satoru x Kakashi</h2>
+                <h3>This design is characterized by anime following by Satoru Gojo from 'Jujutsu Kaisen' 
+                    and Kakashi Hatake from 'Naruto'
+                </h3>
+                <span>₱ 600.00</span>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="image/meshy.jpg" alt="">
+                </div>
+                <h2>(Diamonds) Mesh Short</h2>
+                <h3>The design is inspired by Louis Vuitton to represent 'rich patterns' even if its targeted at the local population.
+                </h3>
+                <span>₱ 399.00</span>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="image/mdc.jpg" alt="">
+                </div>
+                <h2>Yearly Shirt V2</h2>
+                <h3>This version is designated as a limited edition, available exlucively
+                    during the time of our anniversary "2nd Year"
+                </h3>
+                <span>₱ 700.00</span>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="image/hudi.jpg" alt="">
+                </div>
+                <h2>Yearly Hoodie V2</h2>
+                <h3>This version is designated as a limited edition, available exlucively
+                    during the time of our anniversary "2nd Year"
+                </h3>
+                <span>₱ 899.00</span>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="image/stop.jpg" alt="">
+                </div>
+                <h2>Loversion V3 </h2>
+                <h3>This release is limited edition, this version is for valentines day celebrating love. (Don't Stop Loving Me)
+                
+                </h3>
+                <span>₱ 499.00</span>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="image/flame.jpg" alt="">
+                </div>
+                <h2>Icon Mesh Short</h2>
+                <h3>This design is a bunch of funky icons which symbolizes happiness
+                    the logos insterted is from the past design in our shirt
+                </h3>
+                <span>₱ 399.00</span>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="image/baller.jpg" alt="">
+                </div>
+                <h2>Tondo V8 Mesh Short</h2>
+                <h3>Raise the Tondonians Ballers with every dribble every pass,
+                    and every shot on the basketball court (Tondo Mesh Variants)
+                </h3>
+                <span>₱ 399.00</span>
+            </div>
+    
+
+        </div> 
+
+                   
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact" >
+        <div class="footer">
+            <div class="main">
+                <div class="col">
+                    <h4>Menu Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="Size Chart.html">Size Chart</a></li>
+                        <li><a href="location.html">Location</a></li> 
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                    </ul> 
+                </div>
+             
+                <div class="col">
+                    <h4>Social Media</h4>
+                    <div class="social"> 
+                        <ul>
+                            <li><a href="https://www.facebook.com/mnydrdgry">Money Drudgery Clothing</a></li>
+                            <li><a href="https://www.facebook.com/BrandNewWithTagClothing">Brand New With Tag</a></li>
+                            <li><a href="https://www.facebook.com/VICEVERSA.Clo">Vice Versa Clothing</a></li>
+                            <li><a href="https://www.facebook.com/groups/328053012465344">Facebook Group</a></li>> 
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        
+         
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("img-slide");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+
+    </script>
+</body>
+</html>
